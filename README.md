@@ -1,14 +1,16 @@
 # 🚦 Distributed Big Data Pipeline for Urban Mobility Analytics (Hive + HDFS + YARN)
 
-## 🧠 Project Overview
+## 📌 Project Overview
 
-This project designs and implements a **distributed Big Data architecture** to analyze urban mobility using multiple datasets:
+This project implements an **end-to-end distributed Big Data pipeline** to analyze urban mobility patterns using multiple datasets:
 
 * Vehicle mobility data
 * Traffic sensor data
 * Public transport data
 
-The system leverages **HDFS for distributed storage**, **Hive for SQL-based processing**, and **YARN for resource management**, with results visualized through **Power BI dashboards**.
+The system leverages **HDFS for distributed storage**, **Hive for SQL-based data processing**, and **YARN for resource management**, with results visualized through **Power BI dashboards**.
+
+The project simulates a **real-world data engineering workflow**, including data ingestion, distributed storage, processing, and analytical querying.
 
 The objective is to identify congestion patterns, traffic intensity, and public transport demand to support **data-driven urban planning decisions**.
 
@@ -205,6 +207,13 @@ Zones with both high congestion and high public transport demand indicate areas 
 * Analyzes public transport demand by zone and line
 * Supports decision-making for urban mobility optimization
 
+---
+## ⚠️ Limitations
+- Data is simulated and not real-time
+- Batch processing only (no streaming pipeline)
+- No automated orchestration (e.g., Airflow)
+
+This project focuses on demonstrating core Big Data architecture concepts rather than production deployment.
 ---
 
 ## 🚀 Future Improvements
