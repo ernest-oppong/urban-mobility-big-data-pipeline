@@ -181,13 +181,9 @@ Zones with both high congestion and high public transport demand indicate areas 
 
 ![Sensors](dashboards/dashboard_sensors.png)
 
-### 🚌 Transport Analysis
+### 🚌 Transport Analysis and Combined Analysis
 
-![Transport](dashboards/dashboard_transport.png)
-
-### 🔥 Combined Analysis
-
-![Combined](dashboards/dashboard_cross_analysis.png)
+![Transport_and_combined_analytics](dashboards/dashboard_transport_and_combined_analytics.png)
 
 ---
 
