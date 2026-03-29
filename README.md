@@ -154,6 +154,8 @@ Certain transport lines carry significantly more passengers, identifying key rou
 
 ---
 
+## ⭐ Key Analysis: Infrastructure Pressure Detection
+
 ### 🔥 7. Cross Analysis: Congestion + Public Transport
 
 ```sql
