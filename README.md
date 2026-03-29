@@ -1,4 +1,4 @@
-# 🚦 Distributed Big Data Architecture for Urban Mobility Analytics
+# 🚦 Distributed Big Data Pipeline for Urban Mobility Analytics (Hive + HDFS + YARN)
 
 ## 🧠 Project Overview
 
@@ -11,6 +11,15 @@ This project designs and implements a **distributed Big Data architecture** to a
 The system leverages **HDFS for distributed storage**, **Hive for SQL-based processing**, and **YARN for resource management**, with results visualized through **Power BI dashboards**.
 
 The objective is to identify congestion patterns, traffic intensity, and public transport demand to support **data-driven urban planning decisions**.
+
+---
+
+## 🚀 Project Highlights
+
+* End-to-end Big Data pipeline using Hive and HDFS
+* Multi-source data integration (mobility, sensors, transport)
+* Distributed processing with YARN
+* Business-focused analytics for urban mobility optimization
 
 ---
 
@@ -58,6 +67,9 @@ GROUP BY zona, congestion_level;
 📸 Result:
 ![Congestion](hive_results/01_congestion_by_zone_result.png)
 
+💡 Insight:
+High congestion levels are concentrated in central urban zones, indicating traffic bottlenecks and potential need for infrastructure optimization.
+
 ---
 
 ### 🚗 2. Average Speed by Vehicle Type
@@ -70,6 +82,9 @@ GROUP BY vehicle_type;
 
 📸 Result:
 ![Speed](hive_results/02_avg_speed_vehicle_result.png)
+
+💡 Insight:
+Differences in average speeds across vehicle types highlight how congestion impacts mobility efficiency.
 
 ---
 
@@ -84,6 +99,9 @@ GROUP BY SUBSTR(ts,12,2);
 📸 Result:
 ![Peak Hours](hive_results/03_peak_hours_result.png)
 
+💡 Insight:
+Traffic peaks occur during typical commuting hours, confirming expected urban mobility patterns.
+
 ---
 
 ### 📡 4. Vehicles Detected by Zone (Sensors)
@@ -96,6 +114,9 @@ GROUP BY zona;
 
 📸 Result:
 ![Sensors](hive_results/04_vehicles_by_zone_result.png)
+
+💡 Insight:
+Certain zones consistently show higher traffic density, validating congestion patterns observed in mobility data.
 
 ---
 
@@ -110,6 +131,9 @@ GROUP BY estado_sensor;
 📸 Result:
 ![Sensor Status](hive_results/05_sensor_status_result.png)
 
+💡 Insight:
+Monitoring sensor status ensures data reliability and helps detect faulty or inactive sensors.
+
 ---
 
 ### 🚌 6. Passengers per Line
@@ -122,6 +146,9 @@ GROUP BY linea;
 
 📸 Result:
 ![Passengers](hive_results/07_passengers_by_line_result.png)
+
+💡 Insight:
+Certain transport lines carry significantly more passengers, identifying key routes in the urban mobility network.
 
 ---
 
@@ -139,21 +166,38 @@ GROUP BY m.zona;
 📸 Result:
 ![Cross Analysis](hive_results/10_cross_analysis_result.png)
 
+💡 Insight:
+Zones with both high congestion and high public transport demand indicate areas under significant infrastructure pressure and strong candidates for optimization.
+
 ---
 
 ## 📊 Dashboards (Power BI)
 
 ### 🌍 Overview Dashboard
 
-![Dashboard Overview](dashboards/dashboard_overview.png)
+![Overview](dashboards/dashboard_overview.png)
 
 ### 📡 Sensors Dashboard
 
-![Dashboard Sensors](dashboards/dashboard_sensors.png)
+![Sensors](dashboards/dashboard_sensors.png)
 
-### 🚌 Transport Analysis and Combined Analysis
+### 🚌 Transport Analysis
 
-![Dashboard Transport](dashboards/dashboard_transport_and_cross_analysis.png)
+![Transport](dashboards/dashboard_transport.png)
+
+### 🔥 Combined Analysis
+
+![Combined](dashboards/dashboard_cross_analysis.png)
+
+---
+
+## ⚙️ How to Run the Project
+
+1. Upload datasets from `/data/` into HDFS
+2. Create Hive tables using scripts from `/sql/`
+3. Load data into Hive tables
+4. Execute analytical queries
+5. Export results for visualization in Power BI
 
 ---
 
@@ -170,7 +214,7 @@ GROUP BY m.zona;
 ## 🚀 Future Improvements
 
 * Integrate real-time data streaming with Kafka
-* Add Spark for large-scale distributed processing
+* Add Apache Spark for large-scale processing
 * Orchestrate pipelines using Apache Airflow
 * Deploy as a scalable cloud-based solution (AWS / Azure)
 
@@ -186,6 +230,15 @@ GROUP BY m.zona;
 ├── data/
 ├── README.md
 ```
+
+---
+
+## 🧩 Key Learnings
+
+* Designed and implemented a distributed data architecture
+* Worked with Hive for large-scale data processing
+* Integrated multiple datasets for advanced analytics
+* Translated technical results into business insights
 
 ---
 
